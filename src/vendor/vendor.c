@@ -61,7 +61,6 @@
 **************************************************************************/
 int VENDOR_Init(void)
 {
-
     return USP_ERR_OK;
 }
 
@@ -103,3 +102,6 @@ int VENDOR_Stop(void)
     return USP_ERR_OK;
 }
 
+int VENDOR_OpenWrtReboot(){
+    return system("reboot");
+}
