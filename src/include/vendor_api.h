@@ -49,6 +49,8 @@
 int VENDOR_Init(void);
 int VENDOR_Start(void);
 int VENDOR_Stop(void);
+int VENDOR_OpenWrtReboot();
+int VENDOR_OpenWrtFactoryReset();
 
 #ifdef INCLUDE_PROGRAMMATIC_FACTORY_RESET
 int VENDOR_GetFactoryResetParams(kv_vector_t *kvv);

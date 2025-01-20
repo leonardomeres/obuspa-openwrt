@@ -47,7 +47,7 @@
 #include "dm_access.h"
 #include "dm_inst_vector.h"
 #include "text_utils.h"
-#include "vendor.h"
+#include "vendor_api.h"
 
 //------------------------------------------------------------------------------
 // Structure containing vendor hook callback functions which are used by the core agent data model

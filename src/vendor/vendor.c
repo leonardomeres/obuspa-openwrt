@@ -101,15 +101,34 @@ int VENDOR_Stop(void)
 
     return USP_ERR_OK;
 }
-
+/************************************************************************//**
+ * \brief Reboots the OpenWrt device.
+ *
+ * This function initiates a system reboot for an OpenWrt-based device.
+ *
+ * \return int Returns 0 on success, or a negative error code on failure.
+ ***************************************************************************/
 int VENDOR_OpenWrtReboot(){
-    return system("reboot");
-}
 
+    return system("reboot");
+
+}
+/*************************************************************************//**
+ * \brief Resets the OpenWRT device to factory defaults.
+ *
+ * This function triggers a factory reset on the OpenWRT device by
+ * invoking the `firstboot` command. The device will reboot
+ * automatically after the reset is completed.
+ *
+ * \return int Returns 0 on success, or a negative error code on failure.
+ ***************************************************************************/
 int VENDOR_OpenWrtFactoryReset() {
+
     int result = system("factoryreset -y && reboot");
     if (result == -1) {
         return -1;
     }
+
     return WEXITSTATUS(result);
+
 }
