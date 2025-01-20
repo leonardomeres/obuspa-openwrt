@@ -105,3 +105,11 @@ int VENDOR_Stop(void)
 int VENDOR_OpenWrtReboot(){
     return system("reboot");
 }
+
+int VENDOR_OpenWrtFactoryReset() {
+    int result = system("factoryreset -y && reboot");
+    if (result == -1) {
+        return -1;
+    }
+    return WEXITSTATUS(result);
+}

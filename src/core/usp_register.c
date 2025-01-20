@@ -54,7 +54,7 @@
 // NOTE: As this structure is registered early in the bootup, it is safe to be indexed from multiple threads subsequently
 vendor_hook_cb_t vendor_hook_callbacks = {
     .reboot_cb = VENDOR_OpenWrtReboot,
-    .factory_reset_cb = NULL,
+    .factory_reset_cb = VENDOR_OpenWrtFactoryReset,
  };
 
 //------------------------------------------------------------------------------

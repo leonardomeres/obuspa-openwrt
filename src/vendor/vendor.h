@@ -21,4 +21,15 @@
  */
 int VENDOR_OpenWrtReboot();
 
+/**
+ * \brief Resets the OpenWRT device to factory defaults.
+ *
+ * This function triggers a factory reset on the OpenWRT device by
+ * invoking the `firstboot` command. The device will reboot
+ * automatically after the reset is completed.
+ *
+ * \return int Returns 0 on success, or a negative error code on failure.
+ */
+int VENDOR_OpenWrtFactoryReset();
+
 #endif
